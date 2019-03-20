@@ -166,7 +166,6 @@ df_Adv.tail()
 
 # Cut seasons prior to Max Ranking date
 
-import pdb; pdb.set_trace()
 df_seeds = df_seeds[df_seeds.Season>=min(df_rank.Season) ]
 df_seeds = df_seeds[ df_seeds.Season<=max(df_rank.Season)]
 df_tour = df_tour[df_tour.Season>=min(df_rank.Season)]
@@ -174,7 +173,6 @@ df_tour = df_tour[ df_tour.Season<=max(df_rank.Season)]
 # df_tour.head()
 
 df_tour.shape
-
 
 # Cut off the region identifier from the seed number
 
@@ -274,8 +272,8 @@ df_finalData.isnull().any()
 
 # ###  Save dataframes as csv
 
-df_finalData.to_csv('MarchMadnessFeatures.csv', index=False)
+df_finalData.to_csv('MarchMadnessFeatures_allSeasons.csv', index=False)
 
 
-df_Adv.to_csv('MarchMadnessAdvStats.csv', index=False)
+df_Adv.to_csv('MarchMadnessAdvStats_allSeasons.csv', index=False)
 
